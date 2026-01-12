@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG Traffic Manager Pro</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/css/overview.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body class="dark-theme">
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="tg-badge">TG</div>
+                <div class="logo-text">
+                    <h1>TRAFFIC</h1>
+                    <p>MANAGER PRO</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#" class="menu-item active" data-tab="overview">
+                            <i class="fa-solid fa-table-cells-large"></i>
+                            <span>Обзор</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="accounts">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Аккаунты</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Настройки</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="spam">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Спам</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="autoresponder">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>Автоответ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="checker">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Проверка</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="subscriptions">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <span>Подписка</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item" data-tab="logs">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>Логи</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard">
+            
+            <header class="top-bar">
+                <div class="left-controls">
+                    <div class="action-panel">
+                        <button class="action-btns btn-run active" id="btn-run">
+                            <i class="fa-solid fa-play"></i> RUN
+                        </button>
+                        <button class="action-btns btn-hold" id="btn-hold">
+                            <i class="fa-solid fa-pause"></i> HOLD
+                        </button>
+                        <button class="action-btns btn-kill" id="btn-kill">
+                            <i class="fa-solid fa-stop"></i> KILL
+                        </button>
+                    </div>
+
+                    <div class="status-indicator">
+                        <span class="dot pulse"></span>
+                        <span class="status-label">ACTIVE</span>
+                    </div>
+                </div>
+
+                <div class="system-metrics">
+                    <div class="metric-item">
+                        <i class="fa-solid fa-server blue-icon"></i>
+                        <div class="metric-content">
+                            <span class="label">NODES</span>
+                            <span class="value">3</span>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <i class="fa-solid fa-chart-area green-icon"></i>
+                        <div class="metric-content">
+                            <span class="label">TRAFFIC</span>
+                            <span class="value">1,240</span>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <i class="fa-solid fa-clock orange-icon"></i>
+                        <div class="metric-content">
+                            <span class="label">UPTIME</span>
+                            <span class="value">00:12:45</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="content-viewport" class="content-area">
+                </div>
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

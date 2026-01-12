@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="components/css/autoresponder.css">
+</head>
+
+<div class="settings-container">
+    <header class="settings-header">
+        <div class="header-main">
+            <div class="title-line"></div>
+            <div>
+                <h2>АВТООТВЕТЧИК</h2>
+                <p>СИСТЕМА АВТООТЕТОВ v1.0</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid-layout">
+        <main>
+            <section class="card">
+                <div class="section-title">
+                    <i class="fa-solid fa-comment-dots"></i> КОНТЕНТ ОТВЕТА
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-pen-to-square"></i> ТЕКСТ СООБЩЕНИЯ</label>
+                    <div class="input-wrapper">
+                        <textarea class="reply-textarea" placeholder="Введите текст, который будет отправлен пользователю..."></textarea>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <section class="card">
+                <div class="section-title">
+                    <i class="fa-solid fa-clock"></i> ТАЙМИНГИ
+                </div>
+                <div class="form-group">
+                    <div class="input-header">
+                        <label>ЗАДЕРЖКА</label>
+                        <span class="range-value" id="replyDelayVal">5 МИНУТ</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="replyDelay" min="1" max="60" value="5" class="spam-range">
+                    </div>
+                </div>
+            </section>
+
+            <div class="pro-tip">
+                <h4>● ПОДСКАЗКА</h4>
+                <p>Система сработает автоматически при получении входящего сообщения. Убедитесь, что аккаунты находятся в статусе Online.</p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+</html>

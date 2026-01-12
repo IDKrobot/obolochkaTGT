@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="components/css/overview.css">
+</head>
+
+<div class="overview-grid">
+    <div class="metrics-row">
+        <div class="stat-card">
+            <div class="stat-icon-wrap blue-glow">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="stat-info">
+                <span class="stat-label">ВСЕГО СЕССИЙ</span>
+                <h2 class="stat-value">3</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon-wrap green-glow">
+                <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <div class="stat-info">
+                <span class="stat-label">СООБЩЕНИЙ ОТПРАВЛЕНО</span>
+                <h2 class="stat-value">1240</h2>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon-wrap purple-glow">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="stat-info">
+                <span class="stat-label">АКТИВНЫХ ПРОКСИ</span>
+                <h2 class="stat-value">12</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-stats-grid">
+        <div class="content-panel main-stream">
+            <div class="panel-header">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>АКТИВНОСТЬ СИСТЕМЫ</span>
+            </div>
+            <div class="canvas-container">
+                <canvas id="activityChart"></canvas>
+                <div class="stream-overlay">REALTIME DATA STREAM</div>
+            </div>
+        </div>
+
+        <div class="content-panel security-panel">
+            <div class="panel-header">
+                <span>СТАТУС БЕЗОПАСНОСТИ</span>
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            
+            <ul class="security-list">
+                <li>
+                    <span class="sec-label">PROXY PROTECTION</span>
+                    <span class="sec-value status-ok">SECURE</span>
+                </li>
+                <li>
+                    <span class="sec-label">ACCOUNT ROTATION</span>
+                    <span class="sec-value">ENABLED</span>
+                </li>
+                <li>
+                    <span class="sec-label">FINGERPRINT SPOOFING</span>
+                    <span class="sec-value">HIGH</span>
+                </li>
+                <li>
+                    <span class="sec-label">API ENCRYPTED</span>
+                    <span class="sec-value">YES</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overview-footer">
+        <span class="cluster-status">CLUSTER STATUS: <span class="text-success">READY API V3.0-RC1</span></span>
+        <span class="version-tag">EST. 2024 - TG TRAFFIC PRO <i class="fa-solid fa-shield"></i></span>
+    </div>
+</div>
+</html>

@@ -1,0 +1,184 @@
+/* COMPONENT: Logs Page Styles */
+
+.logs-container {
+    animation: fadeIn 0.4s ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- HEADER С ЛИНИЕЙ --- */
+.logs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.header-main-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.title-line {
+    width: 4px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--primary-glow);
+    flex-shrink: 0;
+}
+
+.header-info h2 {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: white;
+    line-height: 1.1;
+}
+
+.header-info p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+/* --- ОСНОВНАЯ ПАНЕЛЬ ЛОГОВ --- */
+.logs-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 250px); /* Динамическая высота */
+    overflow: hidden;
+}
+
+/* ПАНЕЛЬ ИНСТРУМЕНТОВ */
+.logs-toolbar {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.tool-link {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+    opacity: 0.6;
+}
+
+.tool-link:hover {
+    opacity: 1;
+    color: white;
+}
+
+.log-stats {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+}
+
+.count-red { color: var(--danger); }
+
+/* --- ТЕКСТ КОНСОЛИ --- */
+.console-body {
+    flex-grow: 1;
+    background: #09090b;
+    padding: 20px;
+    overflow-y: auto;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace; /* Моноширинный шрифт для логов */
+}
+
+.log-item {
+    font-size: 12.5px; /* Идеальный размер для логов */
+    line-height: 1.6;
+    margin-bottom: 6px;
+    display: flex;
+    gap: 12px;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    animation: logEntry 0.2s ease-out;
+}
+
+@keyframes logEntry {
+    from { opacity: 0; transform: translateX(-5px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.log-item .time {
+    color: #4b5563;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.log-item.success { color: #10b981; }
+.log-item.info { color: #3b82f6; }
+.log-item.warning { color: #f59e0b; }
+.log-item.danger { color: #ef4444; }
+
+/* --- ПЕРЕКЛЮЧАТЕЛЬ АВТОПРОКРУТКИ --- */
+.autoscroll-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.switch-small {
+    position: relative;
+    width: 34px;
+    height: 18px;
+}
+
+.switch-small input { display: none; }
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #27272a;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-round {
+    background-color: var(--primary);
+}
+
+input:checked + .slider-round:before {
+    transform: translateX(16px);
+}

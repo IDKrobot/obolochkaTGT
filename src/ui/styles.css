@@ -1,0 +1,305 @@
+/* PROJECT: TG Traffic Manager Pro 
+   STYLE: Cyberpunk / High-Tech Dark
+   AUTHOR: Gemini & User
+*/
+
+:root {
+    /* Фоновые цвета */
+    --bg-deep: #0a0a0c;
+    --bg-side: #0f0f12;
+    --bg-card: #141417;
+    --bg-accent: #111114;
+    
+    /* Основные цвета состояния */
+    --primary: #3b82f6;      /* Blue */
+    --success: #10b981;      /* Green */
+    --warning: #ffa32a;      /* Orange */
+    --danger: #ff4b4b;       /* Red */
+    
+    /* Цвета текста и границ */
+    --text-primary: #ffffff;
+    --text-secondary: #55555e;
+    --border: #1c1c21;
+    
+    /* Размеры и радиусы */
+    --sidebar-width: 260px;
+    --radius-lg: 14px;
+    --radius-md: 8px;
+    --font-main: 'Inter', sans-serif;
+
+    /* Свечения (Glow effects) */
+    --glow-run: rgba(93, 89, 255, 0.4);
+    --glow-success: rgba(16, 185, 129, 0.4);
+    --glow-warning: rgba(255, 163, 42, 0.4);
+    --glow-danger: rgba(255, 75, 75, 0.4);
+}
+
+/* --- 1. СБРОС СТИЛЕЙ --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    height: 100vh;
+    overflow: hidden;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+/* --- 2. СТРУКТУРА ПРИЛОЖЕНИЯ --- */
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* --- 3. БОКОВАЯ ПАНЕЛЬ (SIDEBAR) --- */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--bg-side);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo-section {
+    padding: 35px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tg-badge {
+    background: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.logo-text h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.logo-text p {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin: 0;
+}
+
+.navigation {
+    flex: 1;
+    margin-top: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border-right: 3px solid transparent;
+}
+
+.menu-item i {
+    width: 28px;
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.menu-item.active {
+    color: var(--primary);
+    background: rgba(59, 130, 246, 0.06);
+    border-right-color: var(--primary);
+}
+
+/* --- 4. КОНТЕНТНАЯ ОБЛАСТЬ (DASHBOARD) --- */
+.dashboard {
+    flex: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* --- 5. ВЕРХНЯЯ ПАНЕЛЬ (TOP BAR) --- */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+}
+
+.left-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Панель кнопок */
+.action-panel {
+    background: var(--bg-accent);
+    padding: 6px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 5px;
+}
+
+/* БАЗОВЫЙ СТИЛЬ КНОПОК (Тут была твоя ошибка) */
+.action-btns {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 10px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 800;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    outline: none;
+}
+
+.action-btns i {
+    font-size: 10px;
+}
+
+.action-btns:hover:not(.active) {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* АКТИВНЫЕ СОСТОЯНИЯ КНОПОК */
+.action-btns.active.btn-run {
+    background: #5d59ff;
+    color: white;
+    box-shadow: 0 0 15px var(--glow-run), 0 4px 10px rgba(93, 89, 255, 0.3);
+}
+
+.action-btns.active.btn-hold {
+    background: var(--warning);
+    color: white;
+    box-shadow: 0 0 15px var(--glow-warning);
+}
+
+.action-btns.active.btn-kill {
+    background: var(--danger);
+    color: white;
+    box-shadow: 0 0 15px var(--glow-danger);
+}
+
+/* ИНДИКАТОР СТАТУСА */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(16, 185, 129, 0.06);
+    padding: 10px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    transition: all 0.5s ease; /* Плавная смена свечения */
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+    transition: background-color 0.3s ease;
+}
+
+.status-label {
+    font-size: 11px;
+    font-weight: 900;
+    color: var(--success);
+    transition: color 0.3s ease;
+}
+
+/* --- 6. АНИМАЦИИ --- */
+
+/* Пульсация точки */
+.dot.pulse {
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px var(--glow-success); opacity: 0.8; }
+    50% { box-shadow: 0 0 20px var(--glow-success); opacity: 1; }
+    100% { box-shadow: 0 0 5px var(--glow-success); opacity: 0.8; }
+}
+
+/* Мигание текста статуса */
+.blink-text {
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* --- 7. МЕТРИКИ (SYSTEM STATS) --- */
+.system-metrics {
+    display: flex;
+    gap: 15px;
+}
+
+.metric-item {
+    background: var(--bg-accent);
+    border: 1px solid var(--border);
+    padding: 12px 20px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 145px;
+}
+
+.metric-item i { font-size: 18px; }
+.blue-icon { color: var(--primary); }
+.green-icon { color: var(--success); }
+.orange-icon { color: var(--warning); }
+
+.label {
+    display: block;
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Область динамического контента */
+.content-area {
+    flex: 1;
+    transition: opacity 0.3s ease;
+}

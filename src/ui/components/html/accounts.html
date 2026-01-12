@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="components/css/accounts.css">
+</head>
+
+<div class="accounts-container">
+    <div class="accounts-header">
+        <div class="header-main-group">
+            <div class="title-line"></div>
+            <div class="header-info">
+                <h2>АККАУНТ МЕНЕДЖЕР</h2>
+                <p>Управление активными сессиями и авторизацией</p>
+            </div>
+        </div>
+        
+        <button class="add-account-btn">
+            <i class="fa-solid fa-plus"></i> ДОБАВИТЬ АККАУНТ
+        </button>
+    </div>
+
+    <div class="accounts-table-wrapper">
+        <table class="accounts-table">
+            <thead>
+                <tr>
+                    <th>СЕССИЯ</th>
+                    <th>СТАТУС</th>
+                    <th>ПРОКСИ</th>
+                    <th>ПОСЛЕДНЯЯ АКТИВНОСТЬ</th>
+                    <th>ДЕЙСТВИЯ</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span><i class="fa-solid fa-rocket"></i> Добавить аккаунт - TG Traffic Manager</span>
+                <button class="close-modal">&times;</button>
+            </div>
+            
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>Имя сессии:</label>
+                    <input type="text" placeholder="Введите имя...">
+                </div>
+
+                <div class="form-group">
+                    <label>Телефон:</label>
+                    <input type="text" placeholder="+7XXXXXXXXXX">
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="useProxy">
+                    <label for="useProxy">Использовать прокси</label>
+                </div>
+
+                <div class="proxy-settings">
+                    <div class="form-group">
+                        <label>Схема:</label>
+                        <select>
+                            <option>http</option>
+                            <option>socks5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Хост:</label>
+                        <input type="text" value="127.0.0.1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Порт:</label>
+                        <input type="number" value="1080">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Пользователь:</label>
+                        <input type="text" placeholder="Имя пользователя (необязательно)">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Пароль:</label>
+                        <input type="password" placeholder="Пароль (необязательно)">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Добавить</button>
+            </form>
+        </div>
+    </div>
+</div>
+</html>

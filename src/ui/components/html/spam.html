@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/css/spam.css">
+</head>
+<body>
+
+<div class="settings-container">
+    <div class="module-header">
+        <div class="title-line"></div><div class="title-group">
+            <h1>СПАМ</h1>
+            <p>НАСТРОЙКА СПАМА</p>
+        </div>
+    </div>
+
+    <div class="grid-layout">
+        <main>
+            <section class="card">
+                <div class="section-title">
+                    <i class="fa-solid fa-sliders"></i>
+                    ПАРАМЕТРЫ РАССЫЛКИ
+                </div>
+
+                <div class="form-group">
+                    <label>ТИП СООБЩЕНИЯ</label>
+                    <select id="messageType">
+                        <option value="text">Текст</option>
+                        <option value="voice">Голосовое сообщение</option>
+                        <option value="photo">Изображение</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>ТЕКСТ СПАМА (ПОДДЕРЖКА {SPINTAX|RANDOM})</label>
+                    <div class="textarea-wrapper">
+                        <textarea placeholder="Введите текст сообщения... Например: Привет! {Глянь|Посмотри} мой новый пост."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-row">
+                        <label>ЗАДЕРЖКА МЕЖДУ ОТПРАВКОЙ</label>
+                        <span class="range-value" id="rangeVal">5 СЕК</span>
+                    </div>
+                    <input type="range" id="delayRange" min="1" max="120" value="5" oninput="document.getElementById('rangeVal').innerText = this.value + ' СЕК'">
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <section class="card">
+                <div class="section-title">
+                    <i class="fa-solid fa-filter"></i>
+                    ФИЛЬТРАЦИЯ ЦЕЛЕЙ
+                </div>
+
+                <div class="form-group">
+                    <div class="sidebar-input-row">
+                        <label>МИНИМУМ УЧАСТНИКОВ</label>
+                        <input type="number" id="minMembers" value="20" class="cyber-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="sidebar-input-row">
+                        <label>Кол-во для просмотра чата(сообщений):</label>
+                        <input type="number" id="viewCount" value="40" class="cyber-input">
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+</div>
+
+</body>
+</html>

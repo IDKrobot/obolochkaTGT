@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="components/css/checker.css">
+</head>
+
+<div class="settings-container">
+    <header class="settings-header">
+        <div class="header-main">
+            <div class="title-line"></div>
+            <div class="header-text">
+                <h2>ПРОВЕРКА</h2>
+                <p>КОНФИГУРАЦИЯ И НАСТРОЙКА ПРОВЕРКИ</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="validation-content">
+        <section class="glass-panel">
+            <div class="panel-header">
+                <div class="panel-title main-label-highlight">
+                    <i class="fa-solid fa-magnifying-glass icon-blue"></i> ПАРАМЕТРЫ АНАЛИЗА
+                </div>
+            </div>
+
+            <div class="analysis-grid-container">
+                <div class="analysis-column">
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-users icon-blue"></i> МИНИМУМ УЧАСТНИКОВ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="200">
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-comment-dots icon-blue"></i> ПРОЦЕНТ УНИКАЛЬНЫХ СООБЩЕНИЙ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="40">
+                            <span class="st-unit">%</span>
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-user-clock icon-blue"></i> ПРОЦЕНТ СТАРЫХ АККАУНТОВ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="30">
+                            <span class="st-unit">%</span>
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-user-slash icon-blue"></i> ПРОЦЕНТ УДАЛЕННЫХ АККАУНТОВ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="30">
+                            <span class="st-unit">%</span>
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-column">
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-user-check icon-blue"></i> ПРОЦЕНТ УНИКАЛЬНЫХ УЧАСТНИКОВ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="33">
+                            <span class="st-unit">%</span>
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-database icon-blue"></i> КОЛИЧЕСТВО СООБЩЕНИЙ ДЛЯ АНАЛИЗА</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="20">
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-calendar-day icon-blue"></i> ПРОЦЕНТ НОВЫХ СООБЩЕНИЙ (7Д)</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="30">
+                            <span class="st-unit">%</span>
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <label><i class="fa-solid fa-stopwatch icon-blue"></i> ЗАДЕРЖКА МЕЖДУ ПРОВЕРКАМИ</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="st-input" value="6">
+                            <span class="st-unit">C</span>
+                            <i class="fa-solid fa-chevron-right input-decorator"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="file-settings-divider">
+                <i class="fa-solid fa-folder-open icon-blue"></i> НАСТРОЙКИ ФАЙЛОВ
+            </div>
+
+            <div class="files-row-layout">
+                <div class="file-control">
+                    <label class="indicator-label">ФАЙЛ С ЧАТАМИ</label>
+                    <div class="rounded-input">
+                        <input type="text" value="chats.txt" readonly>
+                        <i class="fa-solid fa-folder icon-blue-dim"></i>
+                    </div>
+                </div>
+                <div class="file-control">
+                    <label class="indicator-label active">ФАЙЛ С ВАЛИДНЫМИ ЧАТАМИ</label>
+                    <div class="rounded-input">
+                        <input type="text" value="valid.txt" readonly>
+                        <i class="fa-solid fa-folder icon-blue-dim"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</html>

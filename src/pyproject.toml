@@ -1,0 +1,20 @@
+[project]
+name = "teleflow"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "loly-dota",email = "biznestralele@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11, <3.14"
+dependencies = [
+    "loguru (>=0.7.3,<0.8.0)",
+    "kurigram (>=2.2.15,<3.0.0)",
+    "pythonnet (>=3.0.5,<4.0.0)",
+    "pywebview (>=6.1,<7.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

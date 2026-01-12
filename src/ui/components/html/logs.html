@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="components/css/logs.css">
+</head>   
+
+<div class="logs-container">
+    <div class="logs-header">
+        <div class="header-main-group">
+            <div class="title-line"></div>
+            <div class="header-info">
+                <h2>ЖУРНАЛ СОБЫТИЙ</h2>
+                <p>Мониторинг работы системы в реальном времени</p>
+            </div>
+        </div>
+
+        <div class="toolbar-status">
+            <div class="autoscroll-toggle">
+                <span>АВТОПРОКРУТКА</span>
+                <label class="switch-small">
+                    <input type="checkbox" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="logs-card">
+        <div class="logs-toolbar">
+            <div class="left-tools">
+                <button class="tool-link"><i class="fa-solid fa-trash-can"></i> Очистить</button>
+                <button class="tool-link"><i class="fa-solid fa-download"></i> Экспорт</button>
+            </div>
+            <div class="log-stats">
+                <span class="stat-item">ОШИБКИ: <span class="count-red">0</span></span>
+            </div>
+        </div>
+
+        <div class="console-body" id="logConsole">
+            <div class="log-item success">
+                <span class="time">[12:40:02]</span>
+                <span class="message">Система успешно запущена. Все модули активны.</span>
+            </div>
+            <div class="log-item info">
+                <span class="time">[12:40:05]</span>
+                <span class="message">Подключение к аккаунту +79991234567...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

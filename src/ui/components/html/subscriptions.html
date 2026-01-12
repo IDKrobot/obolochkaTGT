@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="components/css/subscriptions.css">
+</head>
+
+<div class="settings-container">
+    <div class="module-header-simple">
+        <div class="header-content">
+            <div class="title-line"></div> <div class="title-group">
+                <h1>Настройки подписки</h1>
+                <p>Конфигурация параметров автоматического вступления в группы и каналы</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="card main-config-card">
+        <div class="card-header-simple">
+            <i class="fa-solid fa-gear"></i>
+            <span>ПАРАМЕТРЫ СЕССИИ</span>
+        </div>
+
+        <div class="input-grid">
+            <div class="stepper-group">
+                <label>ЗАДЕРЖКА МЕЖДУ ПОДПИСКАМИ</label>
+                <div class="cyber-stepper">
+                    <i class="fa-regular fa-clock icon-left"></i>
+                    <input type="number" value="6" id="subDelay">
+                    <span class="unit">СЕК</span>
+                    <div class="stepper-controls">
+                        <button onclick="this.parentNode.parentNode.querySelector('input').stepUp()"><i class="fa-solid fa-chevron-up"></i></button>
+                        <button onclick="this.parentNode.parentNode.querySelector('input').stepDown()"><i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stepper-group">
+                <label>МАКСИМУМ ПОДПИСОК ЗА СЕССИЮ</label>
+                <div class="cyber-stepper">
+                    <i class="fa-solid fa-bolt icon-left" style="color: #ffb020;"></i>
+                    <input type="number" value="50" id="subMax">
+                    <div class="stepper-controls">
+                        <button onclick="this.parentNode.parentNode.querySelector('input').stepUp()"><i class="fa-solid fa-chevron-up"></i></button>
+                        <button onclick="this.parentNode.parentNode.querySelector('input').stepDown()"><i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toggle-grid">
+            <div class="cyber-toggle-card active" onclick="this.classList.toggle('active')">
+                <div class="toggle-icon-min">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="toggle-info">
+                    <h4>Пропускать существующие чаты</h4>
+                    <p>Не выполнять подписку, если вы уже являетесь участником</p>
+                </div>
+            </div>
+
+            <div class="cyber-toggle-card" onclick="this.classList.toggle('active')">
+                <div class="toggle-icon-min danger">
+                    <i class="fa-solid fa-door-open"></i>
+                </div>
+                <div class="toggle-info">
+                    <h4>Автовыход из заблокированных</h4>
+                    <p>Автоматически покидать чаты, в которых получен бан</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn-reset">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                Сбросить к умолчанию
+            </button>
+            <button class="btn-save">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Сохранить настройки
+            </button>
+        </div>
+    </section>
+
+    <p class="bottom-notice">
+        <i class="fa-solid fa-circle-info"></i>
+        Параметры применяются мгновенно ко всем активным процессам
+    </p>
+</div>
+
+</html>

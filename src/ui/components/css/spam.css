@@ -1,0 +1,175 @@
+/* --- ГЛОБАЛЬНЫЕ НАСТРОЙКИ МОДУЛЯ --- */
+.settings-container {
+    animation: fadeInModule 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInModule {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ЗАГОЛОВОК (ИСПРАВЛЕНО: ЛИНИЯ СБОКУ) --- */
+.module-header {
+    margin-bottom: 35px;
+    display: flex;       /* Включаем флекс */
+    align-items: center; /* Центрируем линию и текст по вертикали */
+    gap: 18px;           /* Отступ между линией и текстовой группой */
+}
+
+.title-line {
+    width: 4px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--primary-glow);
+    flex-shrink: 0;
+}
+
+.title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.module-header h1 {
+    font-size: 16px;     /* Оптимальный размер главного текста */
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;           /* Убираем лишние отступы */
+    color: white;
+    line-height: 1.1;
+}
+
+.module-header p {
+    font-size: 9px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+/* --- СЕТКА --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 25px;
+    align-items: start;
+}
+
+/* --- КАРТОЧКИ --- */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 25px;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.section-title {
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.5; /* Делаем заголовок секции чуть тише */
+}
+
+/* --- ЭЛЕМЕНТЫ ФОРМЫ --- */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+/* ИНПУТЫ */
+select, textarea, .cyber-input {
+    width: 100%;
+    background: #0d0d0f;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+textarea {
+    min-height: 160px;
+    resize: none;
+    line-height: 1.6;
+    border-left: 3px solid var(--primary); /* Акцент на поле ввода текста */
+}
+
+/* --- СЛАЙДЕР (Range) --- */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+    height: 20px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 0 0 10px var(--glow-run);
+    border: 2px solid #0d0d0f; /* Добавляет четкости ползунку */
+}
+
+/* --- ПОДСКАЗКА --- */
+.pro-tip {
+    background: rgba(59, 130, 246, 0.03);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+}
+
+.tip-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.tip-header h4 {
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pro-tip p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
