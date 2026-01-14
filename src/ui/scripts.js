@@ -71,6 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(script);
     };
 
+    const loadTabStyle = (tabName) => {
+        // 1. Ищем старый стиль по ID
+        const oldStyle = document.getElementById('tab-style');
+        
+        // 2. Удаляем его, если он существует
+        if (oldStyle) oldStyle.remove();
+
+        // 3. Создаем новый элемент link
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.id = 'tab-style';
+        
+        // 4. Указываем путь к файлу
+        link.href = `components/css/${tabName}.css`; 
+        
+        // 5. Добавляем в head документа
+        document.head.appendChild(link);
+    };
+
     async function loadTab(tabName) {
         try {
             contentArea.style.opacity = '0';
